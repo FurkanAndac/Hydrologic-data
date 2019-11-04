@@ -1,4 +1,8 @@
 <p align="center">
+  <h1>Modified an existing "Template" project to suit my needs</h1>
+</p>
+
+<p align="center">
   <h1>Pure Vue Chart</h1>
 </p>
 <p align="center">
