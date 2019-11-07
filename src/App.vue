@@ -32,7 +32,7 @@ const store = new Vuex.Store({
   },
   mutations: {
     addDPT (state, value) {
-      state.values.push(value)
+     state.values.push(value)
     },
     setDPT (state, value) {
       state.values = value
@@ -86,6 +86,7 @@ export default {
   methods: {
     updateSelected(selected) {
       store.commit('setSelected', selected)
+      console.log("Selected:  ", selected)
       this.selectedCheck()
     },
     avgdpt(value) {
@@ -98,6 +99,7 @@ export default {
       })
       return store.state.avgvalues
     },
+
     dptcheck() {
       this.ensembleCheck()
       let tempDpt = {}
@@ -116,10 +118,12 @@ export default {
         })
       }
     },
+
     selectedCheck() {
       this.dptcheck()
       this.dataPoints = this.avgdpt()
     },
+
     ensembleCheck() {
       let countEnsembles = this.dpt.Data.length
       for (let cnt = 0; cnt < countEnsembles; cnt++) {
